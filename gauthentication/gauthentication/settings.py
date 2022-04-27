@@ -38,9 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
+   # apps required for Allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+   # provider you want to include
     'allauth.socialaccount.providers.google',
 
 ]
