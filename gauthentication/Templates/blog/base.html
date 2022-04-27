@@ -1,15 +1,14 @@
-
 <div class="container green borderXwidth">
-    <b>HOME</b>
+    <a href="/"> <b>HOME</b></a>
     <b>ARTICLES</b>
     <b>PORTFOLIO</b>
     <b>ABOUT</b>
-    <b>CONTACT</b>
+    {% if user.is_authenticated %}
+    <b>Welcome, {{ user.username }}</b>
+    {% else %}
+    <b>No User Loggedin</b>
+    {% endif %}
 </div>
-
-
-
-
 
 
 <style>
@@ -93,5 +92,6 @@ div.borderXwidth b:hover:before, div.borderXwidth b:hover:after
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
 
 </style>
