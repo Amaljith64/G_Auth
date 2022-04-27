@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+
+    {% include 'blog/base.html' %}
+
+</head>
+
+<body>
+
+
+
+
+<div class="container text-dark mt-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-5 p-3">
+            <h1>My Google Authentication Project</h1>
+            {% if user.is_authenticated %}
+            <h2>Welcome, {{ user.username }} !</h2>
+            <form method="get" action="accounts/logout">
+                <button class="button button2" type="submit">Log out</button>
+            </form>
+            {% else %}
+            <h2>Welcome Friend, please</h2>
+            <form method="get" action="accounts/login">
+                <button class="button button2" type="submit">Log in</button>
+            </form>
+
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

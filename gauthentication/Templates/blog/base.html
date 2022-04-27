@@ -1,0 +1,97 @@
+
+<div class="container green borderXwidth">
+    <b>HOME</b>
+    <b>ARTICLES</b>
+    <b>PORTFOLIO</b>
+    <b>ABOUT</b>
+    <b>CONTACT</b>
+</div>
+
+
+
+
+
+
+<style>
+
+    @import 'https://fonts.googleapis.com/css?family=Raleway';
+div.container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 2em 3em;
+	text-align: center;
+}
+
+div.container b
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.green
+{
+    background: #4caf50;
+}
+
+
+/* Border X get width  */
+div.borderXwidth b:before, div.borderXwidth b:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+div.borderXwidth b:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div.borderXwidth b:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderXwidth b:hover:before, div.borderXwidth b:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.button {
+  background-color: #0000FF; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+</style>
